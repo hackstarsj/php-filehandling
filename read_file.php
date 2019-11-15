@@ -68,4 +68,14 @@ $dummy_data="Appending Demo Data";
 fwrite($file,$dummy_data);
 fclose($file);
 
+echo "<br>==================Reading a file using file_get_contents() ==================<br>";
+$data=file_get_contents("data.txt");
+echo $data;
 
+echo "<br>==================Reading a Internet file using file_get_contents() ==================<br>";
+$data=file_get_contents("https://google.com");
+echo $data;
+
+
+echo "<br>========Writing Data into file Using file_put_contents()===============<br>";
+$data=file_put_contents("data.txt","This is Data Written by file put contents");
